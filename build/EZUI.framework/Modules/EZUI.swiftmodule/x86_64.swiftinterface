@@ -1,0 +1,263 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name EZUI
+@_exported import EZUI
+import Foundation
+import Swift
+import UIKit
+public struct EZLayoutProperty<EZAnchor> where EZAnchor : EZUI.EZLayoutAnchor {
+}
+extension EZLayoutProperty {
+  @discardableResult
+  public func equal(to otherAnchor: EZAnchor, offsetBy constant: CoreGraphics.CGFloat = 0.0, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func greaterThanOrEqual(to otherAnchor: EZAnchor, offsetBy constant: CoreGraphics.CGFloat = 0.0, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func lessThanOrEqual(to otherAnchor: EZAnchor, offsetBy constant: CoreGraphics.CGFloat = 0.0, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+}
+extension EZLayoutProperty where EZAnchor : EZUI.EZLayoutDimension {
+  @discardableResult
+  public func equal(toConstant constant: CoreGraphics.CGFloat, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func equal(to otherAnchor: EZAnchor, multiplier: CoreGraphics.CGFloat = 1.0, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func equal(to otherAnchor: EZAnchor, multiplier: CoreGraphics.CGFloat = 1.0, constant: CoreGraphics.CGFloat = 0.0, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func greaterThanOrEqual(toConstant constant: CoreGraphics.CGFloat, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func greaterThanOrEqual(to otherAnchor: EZAnchor, multiplier: CoreGraphics.CGFloat = 1.0, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func greaterThanOrEqual(to otherAnchor: EZAnchor, multiplier: CoreGraphics.CGFloat = 1.0, constant: CoreGraphics.CGFloat = 0.0, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func lessThanOrEqual(toConstant constant: CoreGraphics.CGFloat, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func lessThanOrEqual(to otherAnchor: EZAnchor, multiplier: CoreGraphics.CGFloat = 1.0, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func lessThanOrEqual(to otherAnchor: EZAnchor, multiplier: CoreGraphics.CGFloat = 1.0, constant: CoreGraphics.CGFloat = 0.0, with priority: UIKit.UILayoutPriority? = nil) -> UIKit.NSLayoutConstraint
+}
+extension UIView {
+  public var cornerRadius: CoreGraphics.CGFloat {
+    get
+    set(newValue)
+  }
+  public var borderWidth: CoreGraphics.CGFloat {
+    get
+    set(newValue)
+  }
+  public var borderColor: CoreGraphics.CGColor? {
+    get
+    set(newValue)
+  }
+  public var shadowColor: CoreGraphics.CGColor? {
+    get
+    set(newValue)
+  }
+  public var shadowRadius: CoreGraphics.CGFloat {
+    get
+    set(newValue)
+  }
+  public var shadowOffset: CoreGraphics.CGSize {
+    get
+    set(newValue)
+  }
+  public var shadowOpacity: Swift.Float {
+    get
+    set(newValue)
+  }
+  public var shadowPath: CoreGraphics.CGPath? {
+    get
+    set(newValue)
+  }
+}
+@objc open class EZViewController : UIKit.UIViewController {
+  open var statusBarStyle: UIKit.UIStatusBarStyle {
+    get
+    set(newValue)
+  }
+  @objc override dynamic open var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+  @objc override dynamic open func viewDidLoad()
+  open func setupUI()
+  open func setupTapToEndEditing()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol EZTableViewCellType : AnyObject {
+  static var reuseIdentifier: Swift.String { get }
+  associatedtype EZTableViewCellData
+  func configure(with data: Self.EZTableViewCellData)
+}
+extension EZTableViewCellType {
+  public static var reuseIdentifier: Swift.String {
+    get
+  }
+}
+@objc public class EZTableViewCell : UIKit.UITableViewCell, EZUI.EZTableViewCellType {
+  public typealias EZTableViewCellData = Swift.String
+  public func configure(with data: Swift.String)
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol EZLayoutAnchor {
+  func constraint(equalTo anchor: Self, constant: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  func constraint(greaterThanOrEqualTo anchor: Self, constant: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  func constraint(lessThanOrEqualTo anchor: Self, constant: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+}
+public protocol EZLayoutDimension : EZUI.EZLayoutAnchor {
+  func constraint(equalToConstant constant: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  func constraint(greaterThanOrEqualToConstant constant: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  func constraint(lessThanOrEqualToConstant constant: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  func constraint(equalTo anchor: Self, multiplier: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  func constraint(greaterThanOrEqualTo anchor: Self, multiplier: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  func constraint(lessThanOrEqualTo anchor: Self, multiplier: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  func constraint(equalTo anchor: Self, multiplier: CoreGraphics.CGFloat, constant: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  func constraint(greaterThanOrEqualTo anchor: Self, multiplier: CoreGraphics.CGFloat, constant: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  func constraint(lessThanOrEqualTo anchor: Self, multiplier: CoreGraphics.CGFloat, constant: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+}
+public protocol EZThemeType {
+}
+public enum EZTheme : EZUI.EZThemeType, Swift.CaseIterable {
+  case light
+  case dark
+  case matchParent
+  public static func == (a: EZUI.EZTheme, b: EZUI.EZTheme) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [EZUI.EZTheme]
+  public static var allCases: [EZUI.EZTheme] {
+    get
+  }
+}
+public func + (lhs: inout UIKit.NSLayoutConstraint, rhs: CoreGraphics.CGFloat)
+public func - (lhs: inout UIKit.NSLayoutConstraint, rhs: CoreGraphics.CGFloat)
+extension EZLayoutAnchor {
+  public static func + (lhs: Self, rhs: CoreGraphics.CGFloat) -> (Self, CoreGraphics.CGFloat)
+  public static func - (lhs: Self, rhs: CoreGraphics.CGFloat) -> (Self, CoreGraphics.CGFloat)
+}
+extension EZLayoutProperty {
+  @discardableResult
+  public static func == (lhs: EZUI.EZLayoutProperty<EZAnchor>, rhs: EZAnchor) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public static func == (lhs: EZUI.EZLayoutProperty<EZAnchor>, rhs: (EZAnchor, CoreGraphics.CGFloat)) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public static func >= (lhs: EZUI.EZLayoutProperty<EZAnchor>, rhs: EZAnchor) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public static func >= (lhs: EZUI.EZLayoutProperty<EZAnchor>, rhs: (EZAnchor, CoreGraphics.CGFloat)) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public static func <= (lhs: EZUI.EZLayoutProperty<EZAnchor>, rhs: EZAnchor) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public static func <= (lhs: EZUI.EZLayoutProperty<EZAnchor>, rhs: (EZAnchor, CoreGraphics.CGFloat)) -> UIKit.NSLayoutConstraint
+}
+extension EZLayoutProperty where EZAnchor : EZUI.EZLayoutDimension {
+  @discardableResult
+  public static func == (lhs: EZUI.EZLayoutProperty<EZAnchor>, rhs: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public static func >= (lhs: EZUI.EZLayoutProperty<EZAnchor>, rhs: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public static func <= (lhs: EZUI.EZLayoutProperty<EZAnchor>, rhs: CoreGraphics.CGFloat) -> UIKit.NSLayoutConstraint
+}
+public protocol EZColor {
+  var uiColor: UIKit.UIColor { get }
+  var cgColor: CoreGraphics.CGColor { get }
+  var ciColor: CoreImage.CIColor { get }
+  static func from(_ color: UIKit.UIColor?) -> EZUI.EZColor?
+  static func from(_ color: CoreGraphics.CGColor?) -> EZUI.EZColor?
+  static func from(_ color: CoreImage.CIColor?) -> EZUI.EZColor?
+}
+extension EZColor {
+  public var cgColor: CoreGraphics.CGColor {
+    get
+  }
+  public var ciColor: CoreImage.CIColor {
+    get
+  }
+  public static func from(_ color: CoreGraphics.CGColor?) -> EZUI.EZColor?
+  public static func from(_ color: CoreImage.CIColor?) -> EZUI.EZColor?
+}
+extension UIView {
+  public func ezLayout(using closure: (EZUI.EZLayoutProxy) -> Swift.Void)
+  public func ezFillSuperview()
+}
+@objc open class EZTableView : UIKit.UITableView {
+  open func register(_ cellType: UIKit.UITableViewCell.Type)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect, style: UIKit.UITableView.Style)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public class EZLayoutProxy {
+  public var centerX: EZUI.EZLayoutProperty<UIKit.NSLayoutXAxisAnchor> {
+    get
+    set(value)
+  }
+  public var centerY: EZUI.EZLayoutProperty<UIKit.NSLayoutYAxisAnchor> {
+    get
+    set(value)
+  }
+  public var top: EZUI.EZLayoutProperty<UIKit.NSLayoutYAxisAnchor> {
+    get
+    set(value)
+  }
+  public var leading: EZUI.EZLayoutProperty<UIKit.NSLayoutXAxisAnchor> {
+    get
+    set(value)
+  }
+  public var trailing: EZUI.EZLayoutProperty<UIKit.NSLayoutXAxisAnchor> {
+    get
+    set(value)
+  }
+  public var left: EZUI.EZLayoutProperty<UIKit.NSLayoutXAxisAnchor> {
+    get
+    set(value)
+  }
+  public var right: EZUI.EZLayoutProperty<UIKit.NSLayoutXAxisAnchor> {
+    get
+    set(value)
+  }
+  public var bottom: EZUI.EZLayoutProperty<UIKit.NSLayoutYAxisAnchor> {
+    get
+    set(value)
+  }
+  public var width: EZUI.EZLayoutProperty<UIKit.NSLayoutDimension> {
+    get
+    set(value)
+  }
+  public var height: EZUI.EZLayoutProperty<UIKit.NSLayoutDimension> {
+    get
+    set(value)
+  }
+  @objc deinit
+}
+@objc open class EZScrollViewController : EZUI.EZViewController {
+  public enum ScrollAxis {
+    case horizontal
+    case vertical
+    public static func == (a: EZUI.EZScrollViewController.ScrollAxis, b: EZUI.EZScrollViewController.ScrollAxis) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  open var axis: EZUI.EZScrollViewController.ScrollAxis {
+    get
+    set(newValue)
+  }
+  final public let scrollView: UIKit.UIScrollView
+  final public let contentView: UIKit.UIView
+  @objc override dynamic open func viewDidLoad()
+  open func setupScrollView()
+  open func setupContentView()
+  open func updateAxis()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension NSLayoutAnchor : EZUI.EZLayoutAnchor {
+}
+extension NSLayoutDimension : EZUI.EZLayoutDimension {
+}

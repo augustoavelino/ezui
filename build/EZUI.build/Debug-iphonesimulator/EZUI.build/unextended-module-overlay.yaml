@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/avelino/Library/Developer/Xcode/DerivedData/EZUI-dnyrzxhbbmwkvtcfpkwemncesiel/Build/Products/Debug-iphonesimulator/EZUI.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/avelino/Documents/Projects/iOS/Frameworks/EZUI/build/EZUI.build/Debug-iphonesimulator/EZUI.build/unextended-module.modulemap",
+    }]
+  }]
+}
