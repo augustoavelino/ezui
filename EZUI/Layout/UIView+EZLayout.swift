@@ -17,13 +17,21 @@ public extension UIView {
         closure(EZLayoutProxy(view: self))
     }
     
-    func layoutFillSuperview() {
+    func layoutFillSuperview(topPadding: CGFloat = 0.0, leadingPadding: CGFloat = 0.0, trailingPadding: CGFloat = 0.0, bottomPadding: CGFloat = 0.0) {
         guard let superview = superview else { return }
         layout {
-            $0.top == superview.topAnchor
-            $0.leading == superview.leadingAnchor
-            $0.trailing == superview.trailingAnchor
-            $0.bottom == superview.bottomAnchor
+            $0.top == superview.topAnchor + topPadding
+            $0.leading == superview.leadingAnchor + leadingPadding
+            $0.trailing == superview.trailingAnchor - trailingPadding
+            $0.bottom == superview.bottomAnchor - bottomPadding
         }
+    }
+    
+    func layoutFillSuperview(horizontalPadding: CGFloat = 0.0, verticalPadding: CGFloat = 0.0) {
+        layoutFillSuperview(topPadding: verticalPadding, leadingPadding: horizontalPadding, trailingPadding: horizontalPadding, bottomPadding: verticalPadding)
+    }
+    
+    func layoutFillSuperview(padding: CGFloat = 0.0) {
+        layoutFillSuperview(horizontalPadding: padding, verticalPadding: padding)
     }
 }
