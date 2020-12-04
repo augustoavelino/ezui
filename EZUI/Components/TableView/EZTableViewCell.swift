@@ -8,15 +8,24 @@
 
 import UIKit
 
-open class EZTableViewCell: UITableViewCell {
-    open class var reuseIdentifier: String { "\(Self.self)" }
+public protocol EZTableViewCellType: class {
+    static var reuseIdentifier: String { get }
     
-    override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        selectionStyle = .none
-    }
+    associatedtype EZTableViewCellData
+    func present(data: EZTableViewCellData)
+}
+
+// MARK: -
+public extension EZTableViewCellType {
+    static var reuseIdentifier: String { return "\(type(of: self))" }
+}
+
+// MARK: -
+public class EZTableViewCell: UITableViewCell, EZTableViewCellType {
+    public typealias EZTableViewCellData = String
     
-    required public init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    // MARK: Presentation
+    public func present(data: String) {
+        textLabel?.text = data
     }
 }
