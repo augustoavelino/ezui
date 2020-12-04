@@ -37,10 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E0E5CE9241CF52B00A71A90 /* EZUI_release.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZUI_release.h; sourceTree = "<group>"; };
-		2E0E5CEA241CF52B00A71A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E0E5CF4241CF52B00A71A90 /* EZUI_releaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZUI_releaseTests.swift; sourceTree = "<group>"; };
-		2E0E5CF6241CF52B00A71A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E0E5D00241CF9F900A71A90 /* EZLayoutProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZLayoutProxy.swift; sourceTree = "<group>"; };
 		2E0E5D03241CFA3900A71A90 /* EZLayoutProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZLayoutProperty.swift; sourceTree = "<group>"; };
 		2E0E5D06241CFA6900A71A90 /* UIView+EZLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EZLayout.swift"; sourceTree = "<group>"; };
@@ -81,24 +77,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2E0E5CE8241CF52B00A71A90 /* EZUI-release */ = {
-			isa = PBXGroup;
-			children = (
-				2E0E5CE9241CF52B00A71A90 /* EZUI_release.h */,
-				2E0E5CEA241CF52B00A71A90 /* Info.plist */,
-			);
-			path = "EZUI-release";
-			sourceTree = "<group>";
-		};
-		2E0E5CF3241CF52B00A71A90 /* EZUI-releaseTests */ = {
-			isa = PBXGroup;
-			children = (
-				2E0E5CF4241CF52B00A71A90 /* EZUI_releaseTests.swift */,
-				2E0E5CF6241CF52B00A71A90 /* Info.plist */,
-			);
-			path = "EZUI-releaseTests";
-			sourceTree = "<group>";
-		};
 		2E0E5CFF241CF98F00A71A90 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +95,6 @@
 			children = (
 				2E9AFBE723E50E1F004E988D /* EZUI */,
 				2E9AFBF223E50E1F004E988D /* EZUITests */,
-				2E0E5CE8241CF52B00A71A90 /* EZUI-release */,
-				2E0E5CF3241CF52B00A71A90 /* EZUI-releaseTests */,
 				2E9AFBE623E50E1F004E988D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,9 +112,10 @@
 			isa = PBXGroup;
 			children = (
 				2ED89479241C648000BB1258 /* Framework */,
+				65DB348E257AF2FA00779A03 /* Extensions */,
 				2E0E5CFF241CF98F00A71A90 /* Layout */,
+				65DB348F257AF31000779A03 /* Styles */,
 				2E9AFC5C23E639C2004E988D /* Components */,
-				2E9AFC0523E5E860004E988D /* View */,
 			);
 			path = EZUI;
 			sourceTree = "<group>";
@@ -150,14 +127,6 @@
 				2E9AFBF523E50E1F004E988D /* Info.plist */,
 			);
 			path = EZUITests;
-			sourceTree = "<group>";
-		};
-		2E9AFC0523E5E860004E988D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2E9AFC0223E5E6D4004E988D /* UIView+Layer.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		2E9AFC5923E63934004E988D /* ViewController */ = {
@@ -172,7 +141,6 @@
 		2E9AFC5C23E639C2004E988D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2E42807C240B113B00F2CB22 /* EZColor.swift */,
 				2E9AFC5923E63934004E988D /* ViewController */,
 				2E9AFC6523E63F64004E988D /* TableView */,
 				6584C92724BA15CB00E18CA2 /* EZView.swift */,
@@ -196,6 +164,22 @@
 				2E9AFBE923E50E1F004E988D /* Info.plist */,
 			);
 			path = Framework;
+			sourceTree = "<group>";
+		};
+		65DB348E257AF2FA00779A03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E9AFC0223E5E6D4004E988D /* UIView+Layer.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		65DB348F257AF31000779A03 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				2E42807C240B113B00F2CB22 /* EZColor.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
