@@ -8,32 +8,15 @@
 
 import UIKit
 
-public enum EZVisualEffect {
-    case blur(style: UIBlurEffect.Style)
-    
-    @available(iOS 13.0, *)
-    case vibrancy(blurStyle: UIBlurEffect.Style, style: UIVibrancyEffectStyle)
-    
-    var visualEffect: UIVisualEffect? {
-        switch self {
-        case .blur(let style): return UIBlurEffect(style: style)
-            
-        case .vibrancy(let blurStyle, let style):
-            if #available(iOS 13.0, *) {
-                return UIVibrancyEffect(blurEffect: UIBlurEffect(style: blurStyle), style: style)
-            }
-        }
-        return nil
-    }
-}
-
 open class EZView: UIView {
+    // MARK: Properties
     private var _visualEffect: EZVisualEffect?
     open var visualEffect: EZVisualEffect? {
         get { return _visualEffect }
         set { applyVisualEffect(newValue) }
     }
     
+    // MARK: - Display updates
     open func applyVisualEffect(_ newEffect: EZVisualEffect?) {
         subviews.compactMap { $0 as? UIVisualEffectView }.forEach { $0.removeFromSuperview() }
         _visualEffect = newEffect
