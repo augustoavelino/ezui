@@ -23,7 +23,11 @@
 		2E9AFC6223E63E5F004E988D /* EZTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AFC6123E63E5F004E988D /* EZTableViewCell.swift */; };
 		2E9AFC6423E63F5E004E988D /* EZTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AFC6323E63F5E004E988D /* EZTableView.swift */; };
 		2EA21E25241735C2009F69EC /* EZLayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA21E24241735C1009F69EC /* EZLayoutAnchor.swift */; };
+		652992F8257AF91300A5E2B8 /* EZControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652992F7257AF91300A5E2B8 /* EZControl.swift */; };
+		652992FE257AF9EE00A5E2B8 /* EZSelectionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652992FD257AF9EE00A5E2B8 /* EZSelectionControl.swift */; };
 		6584C92824BA15CB00E18CA2 /* EZView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584C92724BA15CB00E18CA2 /* EZView.swift */; };
+		65B9150B257AFC7C009655FB /* EZTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B9150A257AFC7C009655FB /* EZTextField.swift */; };
+		65B91511257AFE4B009655FB /* EZVisualEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B91510257AFE4B009655FB /* EZVisualEffect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +59,11 @@
 		2E9AFC6123E63E5F004E988D /* EZTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZTableViewCell.swift; sourceTree = "<group>"; };
 		2E9AFC6323E63F5E004E988D /* EZTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZTableView.swift; sourceTree = "<group>"; };
 		2EA21E24241735C1009F69EC /* EZLayoutAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZLayoutAnchor.swift; sourceTree = "<group>"; };
+		652992F7257AF91300A5E2B8 /* EZControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZControl.swift; sourceTree = "<group>"; };
+		652992FD257AF9EE00A5E2B8 /* EZSelectionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZSelectionControl.swift; sourceTree = "<group>"; };
 		6584C92724BA15CB00E18CA2 /* EZView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZView.swift; sourceTree = "<group>"; };
+		65B9150A257AFC7C009655FB /* EZTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZTextField.swift; sourceTree = "<group>"; };
+		65B91510257AFE4B009655FB /* EZVisualEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZVisualEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +149,10 @@
 		2E9AFC5C23E639C2004E988D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6584C92724BA15CB00E18CA2 /* EZView.swift */,
+				652992F6257AF90400A5E2B8 /* Controls */,
 				2E9AFC5923E63934004E988D /* ViewController */,
 				2E9AFC6523E63F64004E988D /* TableView */,
-				6584C92724BA15CB00E18CA2 /* EZView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -166,6 +175,24 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
+		652992F6257AF90400A5E2B8 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				652992F7257AF91300A5E2B8 /* EZControl.swift */,
+				652992FD257AF9EE00A5E2B8 /* EZSelectionControl.swift */,
+				65B91509257AFC42009655FB /* Input */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		65B91509257AFC42009655FB /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				65B9150A257AFC7C009655FB /* EZTextField.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
 		65DB348E257AF2FA00779A03 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				2E42807C240B113B00F2CB22 /* EZColor.swift */,
+				65B91510257AFE4B009655FB /* EZVisualEffect.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -296,12 +324,16 @@
 				2E9AFC0323E5E6D4004E988D /* UIView+Layer.swift in Sources */,
 				2E9AFC5B23E6394A004E988D /* EZViewController.swift in Sources */,
 				2E9AFC6223E63E5F004E988D /* EZTableViewCell.swift in Sources */,
+				65B9150B257AFC7C009655FB /* EZTextField.swift in Sources */,
+				652992F8257AF91300A5E2B8 /* EZControl.swift in Sources */,
+				65B91511257AFE4B009655FB /* EZVisualEffect.swift in Sources */,
 				2EA21E25241735C2009F69EC /* EZLayoutAnchor.swift in Sources */,
 				2E0E5D0D241CFDF800A71A90 /* EZLayout+Global.swift in Sources */,
 				2E42807D240B113B00F2CB22 /* EZColor.swift in Sources */,
 				2E0E5D07241CFA6900A71A90 /* UIView+EZLayout.swift in Sources */,
 				6584C92824BA15CB00E18CA2 /* EZView.swift in Sources */,
 				2E9AFC6423E63F5E004E988D /* EZTableView.swift in Sources */,
+				652992FE257AF9EE00A5E2B8 /* EZSelectionControl.swift in Sources */,
 				2E0E5D01241CF9F900A71A90 /* EZLayoutProxy.swift in Sources */,
 				2E0E5D1A241D516200A71A90 /* EZScrollViewController.swift in Sources */,
 				2E0E5D0A241CFB0400A71A90 /* NSLayout+EZLayout.swift in Sources */,
@@ -468,10 +500,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.augustoavelino.EZUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -498,10 +530,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.augustoavelino.EZUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

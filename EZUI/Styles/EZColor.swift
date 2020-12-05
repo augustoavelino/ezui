@@ -8,15 +8,20 @@
 
 import UIKit
 
+// MARK: Protocol
 public protocol EZColor {
+    // MARK: Properties
     var uiColor: UIColor { get }
     var cgColor: CGColor { get }
     var ciColor: CIColor { get }
+    
+    // MARK: Static methods
     static func from(_ color: UIColor?) -> EZColor?
     static func from(_ color: CGColor?) -> EZColor?
     static func from(_ color: CIColor?) -> EZColor?
 }
 
+// MARK: - Extension
 public extension EZColor {
     var cgColor: CGColor {
         return uiColor.cgColor

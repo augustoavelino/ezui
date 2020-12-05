@@ -9,17 +9,21 @@
 import UIKit
 
 open class EZScrollViewController: EZViewController {
+    // MARK: Nested types
     public enum ScrollAxis {
         case horizontal, vertical
     }
     
+    // MARK: - Properties
     open var axis: ScrollAxis = .vertical {
         didSet { updateAxis() }
     }
     
+    // MARK: UI
     public let scrollView = UIScrollView()
     public let contentView = UIView()
     
+    // MARK: - Life cycle
     open override func viewDidLoad() {
         setupScrollView()
         setupContentView()
@@ -37,6 +41,7 @@ open class EZScrollViewController: EZViewController {
         scrollView.addSubview(contentView)
     }
     
+    // MARK: - Display updates
     open func updateAxis() {
         contentView.removeConstraints(contentView.constraints)
         

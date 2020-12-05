@@ -9,15 +9,16 @@
 import UIKit
 
 open class EZTableView: UITableView {
+    // MARK: Life cycle
     public init(cellClass: EZTableViewCell.Type) {
         super.init(frame: .zero, style: .plain)
-        commonInit()
+        setupUI()
         register(cellClass)
     }
     
     public init(cellClasses: [EZTableViewCell.Type]) {
         super.init(frame: .zero, style: .plain)
-        commonInit()
+        setupUI()
         cellClasses.forEach { cellClass in
             register(cellClass)
         }
@@ -25,14 +26,15 @@ open class EZTableView: UITableView {
     
     override public init(frame: CGRect, style: Style) {
         super.init(frame: frame, style: style)
-        commonInit()
+        setupUI()
     }
     
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    open func commonInit() {
+    // MARK: - Setup
+    open func setupUI() {
         backgroundColor = .clear
         separatorStyle = .none
         rowHeight = UITableView.automaticDimension

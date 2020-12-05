@@ -9,8 +9,10 @@
 import UIKit
 
 open class EZTableViewCell: UITableViewCell {
+    // MARK: Class properties
     open class var reuseIdentifier: String { "\(Self.self)" }
     
+    // MARK: - Life cycle
     override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
