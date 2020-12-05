@@ -9,6 +9,7 @@
 import UIKit
 
 open class EZViewController: UIViewController {
+    // MARK: Properties
     /// The style of the status bar. This prop will only work if you have set the UIViewControllerBasedStatusBarAppearance key of your Info.plist to `true`.
     open var statusBarStyle: UIStatusBarStyle = .default {
         didSet { setNeedsStatusBarAppearanceUpdate() }
@@ -18,12 +19,14 @@ open class EZViewController: UIViewController {
         return statusBarStyle
     }
     
+    // MARK: - Life cycle
     override open func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupTapToEndEditing()
     }
     
+    // MARK: - Setup
     /// A place to invoke your views' setup methods.
     /// This method is called in `viewDidLoad`.
     open func setupUI() {}
