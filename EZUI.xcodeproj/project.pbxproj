@@ -23,6 +23,7 @@
 		2E9AFC6223E63E5F004E988D /* EZTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AFC6123E63E5F004E988D /* EZTableViewCell.swift */; };
 		2E9AFC6423E63F5E004E988D /* EZTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AFC6323E63F5E004E988D /* EZTableView.swift */; };
 		2EA21E25241735C2009F69EC /* EZLayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA21E24241735C1009F69EC /* EZLayoutAnchor.swift */; };
+		652739B5257B3061007EE34F /* EZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652739B4257B3061007EE34F /* EZStackView.swift */; };
 		652992F8257AF91300A5E2B8 /* EZControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652992F7257AF91300A5E2B8 /* EZControl.swift */; };
 		652992FE257AF9EE00A5E2B8 /* EZSelectionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652992FD257AF9EE00A5E2B8 /* EZSelectionControl.swift */; };
 		6584C92824BA15CB00E18CA2 /* EZView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584C92724BA15CB00E18CA2 /* EZView.swift */; };
@@ -59,6 +60,7 @@
 		2E9AFC6123E63E5F004E988D /* EZTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZTableViewCell.swift; sourceTree = "<group>"; };
 		2E9AFC6323E63F5E004E988D /* EZTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZTableView.swift; sourceTree = "<group>"; };
 		2EA21E24241735C1009F69EC /* EZLayoutAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZLayoutAnchor.swift; sourceTree = "<group>"; };
+		652739B4257B3061007EE34F /* EZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZStackView.swift; sourceTree = "<group>"; };
 		652992F7257AF91300A5E2B8 /* EZControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZControl.swift; sourceTree = "<group>"; };
 		652992FD257AF9EE00A5E2B8 /* EZSelectionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZSelectionControl.swift; sourceTree = "<group>"; };
 		6584C92724BA15CB00E18CA2 /* EZView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				6584C92724BA15CB00E18CA2 /* EZView.swift */,
+				652739B4257B3061007EE34F /* EZStackView.swift */,
 				652992F6257AF90400A5E2B8 /* Controls */,
 				2E9AFC5923E63934004E988D /* ViewController */,
 				2E9AFC6523E63F64004E988D /* TableView */,
@@ -322,6 +325,7 @@
 			files = (
 				2E0E5D04241CFA3900A71A90 /* EZLayoutProperty.swift in Sources */,
 				2E9AFC0323E5E6D4004E988D /* UIView+Layer.swift in Sources */,
+				652739B5257B3061007EE34F /* EZStackView.swift in Sources */,
 				2E9AFC5B23E6394A004E988D /* EZViewController.swift in Sources */,
 				2E9AFC6223E63E5F004E988D /* EZTableViewCell.swift in Sources */,
 				65B9150B257AFC7C009655FB /* EZTextField.swift in Sources */,
@@ -500,7 +504,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.augustoavelino.EZUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
@@ -530,7 +534,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.augustoavelino.EZUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
