@@ -9,16 +9,24 @@
 import UIKit
 
 open class EZTableViewCell: UITableViewCell {
-    // MARK: Class properties
+    
+    // MARK: Reuse identifier
+    
     open class var reuseIdentifier: String { "\(Self.self)" }
     
     // MARK: - Life cycle
+    
     override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
+        setupUI()
     }
     
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Setup
+    
+    open func setupUI() {}
 }
