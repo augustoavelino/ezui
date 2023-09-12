@@ -15,9 +15,7 @@ open class EZScrollViewController: EZViewController {
     }
     
     // MARK: - Properties
-    open var axis: ScrollAxis = .vertical {
-        didSet { updateAxis() }
-    }
+    open var axis: ScrollAxis { .vertical }
     
     // MARK: UI
     public let scrollView = UIScrollView()
@@ -27,7 +25,6 @@ open class EZScrollViewController: EZViewController {
     open override func viewDidLoad() {
         setupScrollView()
         setupContentView()
-        updateAxis()
         super.viewDidLoad()
     }
     
@@ -39,12 +36,6 @@ open class EZScrollViewController: EZViewController {
     
     open func setupContentView() {
         scrollView.addSubview(contentView)
-    }
-    
-    // MARK: - Display updates
-    open func updateAxis() {
-        contentView.removeConstraints(contentView.constraints)
-        
         contentView.layout {
             let isVertical = axis == .vertical
             $0.top == (isVertical ? scrollView.topAnchor : view.topAnchor)

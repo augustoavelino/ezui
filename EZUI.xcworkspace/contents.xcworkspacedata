@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:EZUIExample/EZUIExample.xcodeproj">
+      location = "group:EZUI.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:EZUI.xcodeproj">
+      location = "group:EZUIExample/EZUIExample.xcodeproj">
    </FileRef>
 </Workspace>

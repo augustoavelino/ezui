@@ -20,7 +20,7 @@ class IntroViewController: EZViewController {
     override func setupUI() {
         setupColorViews()
         setupEZView()
-        setupLabel()
+//        setupLabel()
     }
     
     private func setupColorViews() {
@@ -62,6 +62,10 @@ class IntroViewController: EZViewController {
         ezView.layout {
             $0.centerX == view.centerXAnchor
             $0.centerY == view.centerYAnchor
+//            $0.width == 0.5 * view.widthAnchor + 100.0
+//            $0.height == (0.5, view.heightAnchor)
+            $0.width == 0.5 * view.widthAnchor
+            $0.height == 0.5 * view.heightAnchor
         }
     }
     

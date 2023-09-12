@@ -11,11 +11,11 @@
 
 import UIKit
 
-public func +(lhs: inout NSLayoutConstraint, rhs: CGFloat) {
+public func +=(lhs: inout NSLayoutConstraint, rhs: CGFloat) {
     lhs.constant += rhs
 }
 
-public func -(lhs: inout NSLayoutConstraint, rhs: CGFloat) {
+public func -=(lhs: inout NSLayoutConstraint, rhs: CGFloat) {
     lhs.constant -= rhs
 }
 
@@ -28,8 +28,12 @@ public extension EZLayoutAnchor {
     static func -(lhs: Self, rhs: CGFloat) -> (Self, CGFloat) {
         return (lhs, -rhs)
     }
-    
-    // TODO: Find a way to implement multiplier (and constant)
+}
+
+public extension EZLayoutDimension {
+    static func *(lhs: CGFloat, rhs: Self) -> (CGFloat, Self) {
+        return (lhs, rhs)
+    }
 }
 
 public extension EZLayoutProperty {
@@ -38,7 +42,7 @@ public extension EZLayoutProperty {
     static func ==(lhs: Self, rhs: EZAnchor) -> NSLayoutConstraint {
         return lhs.equal(to: rhs)
     }
-
+    
     @discardableResult
     static func ==(lhs: Self, rhs: (EZAnchor, CGFloat)) -> NSLayoutConstraint {
         return lhs.equal(to: rhs.0, offsetBy: rhs.1)
@@ -72,14 +76,44 @@ public extension EZLayoutProperty where EZAnchor: EZLayoutDimension {
     static func ==(lhs: Self, rhs: CGFloat) -> NSLayoutConstraint {
         return lhs.equal(toConstant: rhs)
     }
+    
+    @discardableResult
+    static func ==(lhs: Self, rhs: (CGFloat, EZAnchor)) -> NSLayoutConstraint {
+        return lhs.equal(to: rhs.1, multiplier: rhs.0)
+    }
+    
+    @discardableResult
+    static func ==(lhs: Self, rhs: (CGFloat, EZAnchor, CGFloat)) -> NSLayoutConstraint {
+        return lhs.equal(to: rhs.1, multiplier: rhs.0, constant: rhs.2)
+    }
 
     @discardableResult
     static func >=(lhs: Self, rhs: CGFloat) -> NSLayoutConstraint {
         return lhs.greaterThanOrEqual(toConstant: rhs)
     }
+    
+    @discardableResult
+    static func >=(lhs: Self, rhs: (CGFloat, EZAnchor)) -> NSLayoutConstraint {
+        return lhs.greaterThanOrEqual(to: rhs.1, multiplier: rhs.0)
+    }
+    
+    @discardableResult
+    static func >=(lhs: Self, rhs: (CGFloat, EZAnchor, CGFloat)) -> NSLayoutConstraint {
+        return lhs.greaterThanOrEqual(to: rhs.1, multiplier: rhs.0, constant: rhs.2)
+    }
 
     @discardableResult
     static func <=(lhs: Self, rhs: CGFloat) -> NSLayoutConstraint {
         return lhs.lessThanOrEqual(toConstant: rhs)
+    }
+    
+    @discardableResult
+    static func <=(lhs: Self, rhs: (CGFloat, EZAnchor)) -> NSLayoutConstraint {
+        return lhs.lessThanOrEqual(to: rhs.1, multiplier: rhs.0)
+    }
+    
+    @discardableResult
+    static func <=(lhs: Self, rhs: (CGFloat, EZAnchor, CGFloat)) -> NSLayoutConstraint {
+        return lhs.lessThanOrEqual(to: rhs.1, multiplier: rhs.0, constant: rhs.2)
     }
 }

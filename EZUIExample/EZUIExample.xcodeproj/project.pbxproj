@@ -15,6 +15,9 @@
 		2EC62B8824325C0600A4A7E3 /* EZUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC62B8724325C0600A4A7E3 /* EZUI.framework */; };
 		2EC62B8924325C0600A4A7E3 /* EZUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC62B8724325C0600A4A7E3 /* EZUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2EC62B8E24325CC000A4A7E3 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC62B8D24325CC000A4A7E3 /* IntroViewController.swift */; };
+		6554677828A5C4790097A569 /* StyleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554677728A5C4790097A569 /* StyleMenuViewController.swift */; };
+		6554677F28A5C48F0097A569 /* TypographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554677E28A5C48F0097A569 /* TypographyViewController.swift */; };
+		6554678528A5C5230097A569 /* TypographyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554678428A5C5230097A569 /* TypographyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		2E9AFC3C23E5F5FF004E988D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EC62B8724325C0600A4A7E3 /* EZUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EZUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC62B8D24325CC000A4A7E3 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		6554677728A5C4790097A569 /* StyleMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleMenuViewController.swift; sourceTree = "<group>"; };
+		6554677E28A5C48F0097A569 /* TypographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyViewController.swift; sourceTree = "<group>"; };
+		6554678428A5C5230097A569 /* TypographyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,9 +174,28 @@
 		2EC62B8C24325C9200A4A7E3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6554677628A5C4660097A569 /* Style */,
 				2EC62B8D24325CC000A4A7E3 /* IntroViewController.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		6554677628A5C4660097A569 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				6554677728A5C4790097A569 /* StyleMenuViewController.swift */,
+				6554677B28A5C47B0097A569 /* Typography */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		6554677B28A5C47B0097A569 /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				6554677E28A5C48F0097A569 /* TypographyViewController.swift */,
+				6554678428A5C5230097A569 /* TypographyViewModel.swift */,
+			);
+			path = Typography;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,7 +330,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E9AFC1923E5F5F8004E988D /* AppDelegate.swift in Sources */,
+				6554677828A5C4790097A569 /* StyleMenuViewController.swift in Sources */,
+				6554678528A5C5230097A569 /* TypographyViewModel.swift in Sources */,
 				2EC62B8E24325CC000A4A7E3 /* IntroViewController.swift in Sources */,
+				6554677F28A5C48F0097A569 /* TypographyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
