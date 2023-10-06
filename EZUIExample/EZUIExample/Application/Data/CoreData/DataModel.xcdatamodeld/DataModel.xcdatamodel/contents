@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Palette" representedClassName="Palette" syncable="YES" codeGenerationType="class">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="colors" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="PaletteColor" inverseName="palette" inverseEntity="PaletteColor"/>
+    </entity>
+    <entity name="PaletteColor" representedClassName="PaletteColor" syncable="YES" codeGenerationType="class">
+        <attribute name="colorHex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="palette" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Palette" inverseName="colors" inverseEntity="Palette"/>
+    </entity>
+    <entity name="Project" representedClassName="Project" syncable="YES" codeGenerationType="class">
+        <attribute name="bannerImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="shortIntro" optional="YES" attributeType="String"/>
+        <attribute name="uuid" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ProjectSourceRef" representedClassName="ProjectSourceRef" syncable="YES" codeGenerationType="class">
+        <attribute name="projectID" optional="YES" attributeType="String"/>
+        <attribute name="sourceID" optional="YES" attributeType="String"/>
+        <attribute name="sourceType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="StringsFile" representedClassName="StringsFile" syncable="YES" codeGenerationType="class">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="uuid" optional="YES" attributeType="String"/>
+        <relationship name="strings" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="StringsFileString" inverseName="stringsFile" inverseEntity="StringsFileString"/>
+    </entity>
+    <entity name="StringsFileString" representedClassName="StringsFileString" syncable="YES" codeGenerationType="class">
+        <attribute name="key" optional="YES" attributeType="String"/>
+        <attribute name="uuid" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+        <relationship name="stringsFile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StringsFile" inverseName="strings" inverseEntity="StringsFile"/>
+    </entity>
+</model>

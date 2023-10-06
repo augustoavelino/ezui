@@ -1,0 +1,18 @@
+/* 
+  SVGContent.strings
+  EZUIExample
+
+  Created by Augusto Avelino on 27/06/23.
+  Copyright © 2023 Augusto Avelino. All rights reserved.
+*/
+
+"fileHeader" = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!--Generator: EZUI %@-->\n<!DOCTYPE svg\nPUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n\t\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n";
+
+"beginFile" = "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"%@\" height=\"%@\">";
+"endFile" = "</svg>";
+
+"beginGroup" = "<g id=\"%@\">";
+"endGroup" = "</g>";
+
+"rect" = "<rect y=\"%@\" width=\"%@\" height=\"%@\" fill=\"%@\"/>";
+"text" = "<text x=\"%@\" y=\"%@\" style=\"font-family: 'SF Pro Display', Helvetica, sans-serif; font-size: 16px; line-height: 19px; font-weight: 600; font-style: medium; fill: %@\">%@</text>";

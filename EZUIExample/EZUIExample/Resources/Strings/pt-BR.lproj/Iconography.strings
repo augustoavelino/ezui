@@ -1,0 +1,12 @@
+/* 
+  Iconography.strings
+  EZUIExample
+
+  Created by Augusto Avelino on 25/06/23.
+  Copyright © 2023 Augusto Avelino. All rights reserved.
+*/
+
+"title" = "Iconografia";
+
+"segmentAll" = "Todos (%d)";
+"segmentFavorites" = "Favoritos (%d)";

@@ -9,19 +9,23 @@
 import UIKit
 
 open class EZTableView: UITableView {
+    
     // MARK: Life cycle
-    public init(cellClass: EZTableViewCell.Type) {
-        super.init(frame: .zero, style: .plain)
+    
+    public init(cellClass: EZTableViewCell.Type, headerFooterClasses: [EZTableViewHeaderFooterView.Type] = [], style: UITableView.Style = .plain, separatorStyle: UITableViewCell.SeparatorStyle = .none) {
+        super.init(frame: .zero, style: style)
+        self.separatorStyle = separatorStyle
         setupUI()
         register(cellClass)
+        register(headerFooterClasses)
     }
     
-    public init(cellClasses: [EZTableViewCell.Type]) {
-        super.init(frame: .zero, style: .plain)
+    public init(cellClasses: [EZTableViewCell.Type], headerFooterClasses: [EZTableViewHeaderFooterView.Type] = [], style: UITableView.Style = .plain, separatorStyle: UITableViewCell.SeparatorStyle = .none) {
+        super.init(frame: .zero, style: style)
+        self.separatorStyle = separatorStyle
         setupUI()
-        cellClasses.forEach { cellClass in
-            register(cellClass)
-        }
+        register(cellClasses)
+        register(headerFooterClasses)
     }
     
     override public init(frame: CGRect, style: Style) {
@@ -34,14 +38,33 @@ open class EZTableView: UITableView {
     }
     
     // MARK: - Setup
+    
     open func setupUI() {
-        backgroundColor = .clear
-        separatorStyle = .none
         rowHeight = UITableView.automaticDimension
         estimatedRowHeight = UITableView.automaticDimension
     }
     
+    // MARK: Cell
+    
     open func register(_ cellClass: EZTableViewCell.Type) {
         register(cellClass, forCellReuseIdentifier: cellClass.reuseIdentifier)
+    }
+    
+    open func register(_ cellClasses: [EZTableViewCell.Type]) {
+        for cellClass in cellClasses {
+            register(cellClass, forCellReuseIdentifier: cellClass.reuseIdentifier)
+        }
+    }
+    
+    // MARK: Header | Footer
+    
+    open func register(_ viewClass: EZTableViewHeaderFooterView.Type) {
+        register(viewClass, forHeaderFooterViewReuseIdentifier: viewClass.reuseIdentifier)
+    }
+    
+    open func register(_ viewClasses: [EZTableViewHeaderFooterView.Type]) {
+        for viewClass in viewClasses {
+            register(viewClass, forHeaderFooterViewReuseIdentifier: viewClass.reuseIdentifier)
+        }
     }
 }

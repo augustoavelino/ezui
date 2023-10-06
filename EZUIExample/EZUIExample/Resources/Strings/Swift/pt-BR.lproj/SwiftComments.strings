@@ -1,0 +1,9 @@
+/* 
+  SwiftComments.strings
+  EZUIExample
+
+  Created by Augusto Avelino on 26/06/23.
+  Copyright © 2023 Augusto Avelino. All rights reserved.
+*/
+
+"fileHeader" = "//\n//  %@.swift\n//  %@\n//\n//  Criado por %@ em %@.\n//  Copyright © %@ %@. Todos os direitos reservados.\n//\n//  Este arquivo foi gerado utilizando EZUI Utility ® e não deve ser modificado.\n//  Para alterar seu conteúdo, use o aplicativo para atualizar os dados e exportar um novo arquivo.\n//\n\n";

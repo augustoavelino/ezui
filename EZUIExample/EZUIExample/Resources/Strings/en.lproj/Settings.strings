@@ -1,0 +1,11 @@
+/* 
+  Settings.strings
+  EZUIExample
+
+  Created by Augusto Avelino on 22/06/23.
+  Copyright © 2023 Augusto Avelino. All rights reserved.
+*/
+
+"title" = "Settings";
+"version" = "%@ v%@";
+"author" = "by Augusto Avelino";

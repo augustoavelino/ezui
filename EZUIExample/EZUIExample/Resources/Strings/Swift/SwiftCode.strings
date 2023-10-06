@@ -1,0 +1,34 @@
+/* 
+  SwiftCode.strings
+  EZUIExample
+
+  Created by Augusto Avelino on 26/06/23.
+  Copyright © 2023 Augusto Avelino. All rights reserved.
+*/
+
+"colon" = ":";
+"emptySpace" = " ";
+"tab" = "\t";
+"assignValue" = " = ";
+
+"importModule" = "import %@";
+"classDeclaration" = "class %@";
+"enumDeclaration" = "enum %@";
+"enumRawValueDeclaration" = "enum %@: %@";
+"structDeclaration" = "struct %@";
+"protocolDeclaration" = "protocol %@";
+"extensionDeclaration" = "extension %@";
+
+"beginDeclaration" = "{\n";
+"endDeclaration" = "}\n";
+
+"caseDeclaration" = "case %@";
+"caseRawValueDeclaration" = "case %@ = %@";
+"varDeclaration" = "var %@";
+"letDeclaration" = "let %@";
+"staticVarDeclaration" = "static var %@";
+"staticLetDeclaration" = "static let %@";
+"weakVarDeclaration" = "weak var %@: %@?";
+
+"uiColorRGBInit" = "UIColor(rgb: %@)";
+"uiColorRGBAInit" = "UIColor(rgba: %@)";
