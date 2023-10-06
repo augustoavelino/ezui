@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,15 +23,24 @@
 		2E9AFC6223E63E5F004E988D /* EZTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AFC6123E63E5F004E988D /* EZTableViewCell.swift */; };
 		2E9AFC6423E63F5E004E988D /* EZTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AFC6323E63F5E004E988D /* EZTableView.swift */; };
 		2EA21E25241735C2009F69EC /* EZLayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA21E24241735C1009F69EC /* EZLayoutAnchor.swift */; };
+		6518DF812A4CB3E6002BE3C6 /* EZTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518DF802A4CB3E6002BE3C6 /* EZTextView.swift */; };
 		652739B5257B3061007EE34F /* EZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652739B4257B3061007EE34F /* EZStackView.swift */; };
 		652992F8257AF91300A5E2B8 /* EZControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652992F7257AF91300A5E2B8 /* EZControl.swift */; };
 		652992FE257AF9EE00A5E2B8 /* EZSelectionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652992FD257AF9EE00A5E2B8 /* EZSelectionControl.swift */; };
+		65334EB82A473AEC00B044A5 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65334EB72A473AEC00B044A5 /* UIBarButtonItem+Extensions.swift */; };
+		654A89712A469029008B9ADD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89702A469029008B9ADD /* String+Extensions.swift */; };
 		65546717289FF7B60097A569 /* EZLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65546716289FF7B60097A569 /* EZLabel.swift */; };
 		65546720289FF8190097A569 /* EZFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554671F289FF8190097A569 /* EZFont.swift */; };
 		65546724289FFBC40097A569 /* EZLabel+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65546723289FFBC40097A569 /* EZLabel+Defaults.swift */; };
 		6584C92824BA15CB00E18CA2 /* EZView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584C92724BA15CB00E18CA2 /* EZView.swift */; };
+		65893A1329EDF6F500D04EF7 /* EZCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65893A1229EDF6F500D04EF7 /* EZCollectionView.swift */; };
+		65893A1529EDF6FE00D04EF7 /* EZCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65893A1429EDF6FE00D04EF7 /* EZCollectionViewCell.swift */; };
+		659DA8E22A549388001127D1 /* EZCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659DA8E12A549388001127D1 /* EZCoordinatorProtocol.swift */; };
+		65A3AB972A390B3D001437C6 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A3AB962A390B3D001437C6 /* UIColor+Hex.swift */; };
 		65B9150B257AFC7C009655FB /* EZTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B9150A257AFC7C009655FB /* EZTextField.swift */; };
 		65B91511257AFE4B009655FB /* EZVisualEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B91510257AFE4B009655FB /* EZVisualEffect.swift */; };
+		65C423462A5B014900B593D4 /* EZTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C423452A5B014900B593D4 /* EZTableViewHeaderFooterView.swift */; };
+		65D1FDB32A37CA610083A4E3 /* EZDefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1FDB22A37CA610083A4E3 /* EZDefaultTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,15 +72,24 @@
 		2E9AFC6123E63E5F004E988D /* EZTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZTableViewCell.swift; sourceTree = "<group>"; };
 		2E9AFC6323E63F5E004E988D /* EZTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZTableView.swift; sourceTree = "<group>"; };
 		2EA21E24241735C1009F69EC /* EZLayoutAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZLayoutAnchor.swift; sourceTree = "<group>"; };
+		6518DF802A4CB3E6002BE3C6 /* EZTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZTextView.swift; sourceTree = "<group>"; };
 		652739B4257B3061007EE34F /* EZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZStackView.swift; sourceTree = "<group>"; };
 		652992F7257AF91300A5E2B8 /* EZControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZControl.swift; sourceTree = "<group>"; };
 		652992FD257AF9EE00A5E2B8 /* EZSelectionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZSelectionControl.swift; sourceTree = "<group>"; };
+		65334EB72A473AEC00B044A5 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
+		654A89702A469029008B9ADD /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		65546716289FF7B60097A569 /* EZLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZLabel.swift; sourceTree = "<group>"; };
 		6554671F289FF8190097A569 /* EZFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZFont.swift; sourceTree = "<group>"; };
 		65546723289FFBC40097A569 /* EZLabel+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EZLabel+Defaults.swift"; sourceTree = "<group>"; };
 		6584C92724BA15CB00E18CA2 /* EZView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZView.swift; sourceTree = "<group>"; };
+		65893A1229EDF6F500D04EF7 /* EZCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZCollectionView.swift; sourceTree = "<group>"; };
+		65893A1429EDF6FE00D04EF7 /* EZCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZCollectionViewCell.swift; sourceTree = "<group>"; };
+		659DA8E12A549388001127D1 /* EZCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		65A3AB962A390B3D001437C6 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		65B9150A257AFC7C009655FB /* EZTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZTextField.swift; sourceTree = "<group>"; };
 		65B91510257AFE4B009655FB /* EZVisualEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZVisualEffect.swift; sourceTree = "<group>"; };
+		65C423452A5B014900B593D4 /* EZTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		65D1FDB22A37CA610083A4E3 /* EZDefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZDefaultTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +145,7 @@
 		2E9AFBE723E50E1F004E988D /* EZUI */ = {
 			isa = PBXGroup;
 			children = (
+				659DA8E02A549377001127D1 /* Coordinator */,
 				2ED89479241C648000BB1258 /* Framework */,
 				65DB348E257AF2FA00779A03 /* Extensions */,
 				2E0E5CFF241CF98F00A71A90 /* Layout */,
@@ -157,12 +176,13 @@
 		2E9AFC5C23E639C2004E988D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6554671E289FF80E0097A569 /* Label */,
-				6584C92724BA15CB00E18CA2 /* EZView.swift */,
 				652739B4257B3061007EE34F /* EZStackView.swift */,
+				6584C92724BA15CB00E18CA2 /* EZView.swift */,
+				65893A1129EDF6E400D04EF7 /* CollectionView */,
 				652992F6257AF90400A5E2B8 /* Controls */,
-				2E9AFC5923E63934004E988D /* ViewController */,
+				6554671E289FF80E0097A569 /* Label */,
 				2E9AFC6523E63F64004E988D /* TableView */,
+				2E9AFC5923E63934004E988D /* ViewController */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -172,6 +192,7 @@
 			children = (
 				2E9AFC6323E63F5E004E988D /* EZTableView.swift */,
 				2E9AFC6123E63E5F004E988D /* EZTableViewCell.swift */,
+				65C423452A5B014900B593D4 /* EZTableViewHeaderFooterView.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -199,16 +220,34 @@
 			isa = PBXGroup;
 			children = (
 				65546716289FF7B60097A569 /* EZLabel.swift */,
-				6554671F289FF8190097A569 /* EZFont.swift */,
 				65546723289FFBC40097A569 /* EZLabel+Defaults.swift */,
 			);
 			path = Label;
+			sourceTree = "<group>";
+		};
+		65893A1129EDF6E400D04EF7 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				65893A1229EDF6F500D04EF7 /* EZCollectionView.swift */,
+				65893A1429EDF6FE00D04EF7 /* EZCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		659DA8E02A549377001127D1 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				659DA8E12A549388001127D1 /* EZCoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		65B91509257AFC42009655FB /* Input */ = {
 			isa = PBXGroup;
 			children = (
 				65B9150A257AFC7C009655FB /* EZTextField.swift */,
+				65D1FDB22A37CA610083A4E3 /* EZDefaultTextField.swift */,
+				6518DF802A4CB3E6002BE3C6 /* EZTextView.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -216,6 +255,9 @@
 		65DB348E257AF2FA00779A03 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				654A89702A469029008B9ADD /* String+Extensions.swift */,
+				65334EB72A473AEC00B044A5 /* UIBarButtonItem+Extensions.swift */,
+				65A3AB962A390B3D001437C6 /* UIColor+Hex.swift */,
 				2E9AFC0223E5E6D4004E988D /* UIView+Layer.swift */,
 			);
 			path = Extensions;
@@ -225,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				2E42807C240B113B00F2CB22 /* EZColor.swift */,
+				6554671F289FF8190097A569 /* EZFont.swift */,
 				65B91510257AFE4B009655FB /* EZVisualEffect.swift */,
 			);
 			path = Styles;
@@ -286,8 +329,9 @@
 		2E9AFBDC23E50E1F004E988D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "Augusto Avelino";
 				TargetAttributes = {
 					2E9AFBE423E50E1F004E988D = {
@@ -300,7 +344,7 @@
 				};
 			};
 			buildConfigurationList = 2E9AFBDF23E50E1F004E988D /* Build configuration list for PBXProject "EZUI" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -340,26 +384,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65334EB82A473AEC00B044A5 /* UIBarButtonItem+Extensions.swift in Sources */,
+				65D1FDB32A37CA610083A4E3 /* EZDefaultTextField.swift in Sources */,
 				2E0E5D04241CFA3900A71A90 /* EZLayoutProperty.swift in Sources */,
 				2E9AFC0323E5E6D4004E988D /* UIView+Layer.swift in Sources */,
 				652739B5257B3061007EE34F /* EZStackView.swift in Sources */,
 				2E9AFC5B23E6394A004E988D /* EZViewController.swift in Sources */,
 				2E9AFC6223E63E5F004E988D /* EZTableViewCell.swift in Sources */,
+				65893A1529EDF6FE00D04EF7 /* EZCollectionViewCell.swift in Sources */,
 				65B9150B257AFC7C009655FB /* EZTextField.swift in Sources */,
 				652992F8257AF91300A5E2B8 /* EZControl.swift in Sources */,
+				65893A1329EDF6F500D04EF7 /* EZCollectionView.swift in Sources */,
 				65B91511257AFE4B009655FB /* EZVisualEffect.swift in Sources */,
 				2EA21E25241735C2009F69EC /* EZLayoutAnchor.swift in Sources */,
 				2E0E5D0D241CFDF800A71A90 /* EZLayout+Global.swift in Sources */,
 				2E42807D240B113B00F2CB22 /* EZColor.swift in Sources */,
+				654A89712A469029008B9ADD /* String+Extensions.swift in Sources */,
 				65546717289FF7B60097A569 /* EZLabel.swift in Sources */,
 				2E0E5D07241CFA6900A71A90 /* UIView+EZLayout.swift in Sources */,
 				65546720289FF8190097A569 /* EZFont.swift in Sources */,
 				6584C92824BA15CB00E18CA2 /* EZView.swift in Sources */,
 				2E9AFC6423E63F5E004E988D /* EZTableView.swift in Sources */,
+				65A3AB972A390B3D001437C6 /* UIColor+Hex.swift in Sources */,
+				659DA8E22A549388001127D1 /* EZCoordinatorProtocol.swift in Sources */,
+				65C423462A5B014900B593D4 /* EZTableViewHeaderFooterView.swift in Sources */,
 				652992FE257AF9EE00A5E2B8 /* EZSelectionControl.swift in Sources */,
 				2E0E5D01241CF9F900A71A90 /* EZLayoutProxy.swift in Sources */,
 				65546724289FFBC40097A569 /* EZLabel+Defaults.swift in Sources */,
 				2E0E5D1A241D516200A71A90 /* EZScrollViewController.swift in Sources */,
+				6518DF812A4CB3E6002BE3C6 /* EZTextView.swift in Sources */,
 				2E0E5D0A241CFB0400A71A90 /* NSLayout+EZLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +564,7 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -518,6 +572,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = EZUI/Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -527,6 +582,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.3.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.augustoavelino.EZUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
@@ -542,6 +599,7 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -549,6 +607,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = EZUI/Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -558,6 +617,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.3.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.augustoavelino.EZUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;

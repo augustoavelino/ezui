@@ -1,0 +1,26 @@
+/* 
+  Menu.strings
+  EZUIExample
+
+  Created by Augusto Avelino on 16/06/23.
+  Copyright © 2023 Augusto Avelino. All rights reserved.
+*/
+
+"title" = "Menu";
+
+"resourcesSectionTitle" = "recursos";
+"stylesSectionTitle" = "estilos";
+"componentsSectionTitle" = "componentes";
+"compositionSectionTitle" = "composição";
+
+"stringsTitle" = "Strings";
+"imagesTitle" = "Imagens";
+
+"colorPaletteTitle" = "Paletas de Cores";
+"typographyTitle" = "Tipografia";
+"iconographyTitle" = "Iconografia";
+
+"buttonTitle" = "Botão";
+
+"viewComposerTitle" = "Compositor de View";
+"viewLayoutTitle" = "View Layout";
